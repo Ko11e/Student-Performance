@@ -1,4 +1,16 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Student preformence
+## Introduction
+
+## Business Requirments
+
+* What are the requirments for improving you exam scores.
+
+* What are the features the hava an effect on the stundent grad.
+
+* The school what to see a visual display on the correlation the effects the score of the students
+
+
+## Hypothesis and how to validate 
 
 ## Template Instructions
 
