@@ -5,9 +5,9 @@
 
 * What are the requirments for improving you exam scores.
 
-* What are the features the hava an effect on the stundent grad.
+* What are the features that have an effect on the stundent grad.
 
-* The school what to see a visual display on the correlation the effects the score of the students
+* The school what to see a visual display on the correlation that effects the score of the students
 
 
 ## Hypothesis and how to validate 
