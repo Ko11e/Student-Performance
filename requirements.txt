@@ -6,6 +6,8 @@ feature-engine==1.6.2
 fonttools==4.54.1
 htmlmin==0.1.12
 ImageHash==4.3.1
+imbalanced-learn==0.12.4
+imblearn==0.0
 ipywidgets==8.1.5
 joblib==1.4.2
 jupyterlab_widgets==3.0.13
