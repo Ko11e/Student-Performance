@@ -1,7 +1,8 @@
 # Student performence
-## Introduction
 
-### Table of contents
+Introduction
+
+## Table of contents
 
 1. [Introduction](#introduction)
 2. [Dataset Content](#dataset-content)
@@ -34,6 +35,7 @@
     - [Media References](#media-references)
 12. [Acknowledgements (Optional)](#acknowledgements-optional)
 
+-------------
 
 ## Dataset Content
 
@@ -65,6 +67,9 @@ The dataset is obtained from **Kaggle** and includes data on various attributes 
 
 
 The dataset can also be seen here on [Kaggle](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors).
+
+-------------
+
 ## Business Requirments
 
 * What are the requirments for improving you exam scores.
@@ -74,23 +79,22 @@ This dataset is useful for exploring correlations between these factors and perf
 
 * The school what to see a visual display on the correlation that effects the score of the students
 
-
-
-## Business Requirements
-* Describe your business requirements
-
+-------------
 
 ## Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them) 
 
+-------------
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
 
+-------------
 
 ## ML Business Case
 * In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
+ ------------
 
 ## Dashboard Design
 
@@ -118,6 +122,22 @@ This page explores the hypotheses regarding the Students to improve theire Exam 
 
 ### Page 6: ML Success Predictor
 Evaluates and showcases the performance of a Students prediction models. The page presents the complete machine learning pipelines, including data cleaning, feature engineering, and modeling. It highlights feature importance and provides a detailed summary of the model's predictive performance.
+
+-----
+
+## Testing
+
+### Manuel test
+
+
+
+### Automated test
+
+No automated tests have been conducted on the code.
+
+### Validation
+
+All code in the app_pages and src directories was validated as conforming to PEP8 standards using CodeInstitute's PEP8 Linter.
 
 ## Bugs
 
