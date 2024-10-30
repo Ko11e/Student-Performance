@@ -117,7 +117,18 @@ This can been seen in the on the best features for the ML Pipeline that predict 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+### Business Requirement 1
+
+To understand the factors associated with higher student scores, we will perform a correlation study. This analysis will utilize different methods to detect various types of relationships. First, Pearson's method will be used to identify linear relationships, while Spearman's method will capture monotonic relationships. Additionally, the Predictive Power Score (PPS) will help us detect more subtle and potentially asymmetric associations. Once the classification models are complete, we will also extract similar statistics from the key features identified as important within these models.
+
+### Business Requirement 2
+
+In order to accurately predict students' exam scores, we will implement a regression model that will enable us to estimate these scores based on a variety of relevant features. This approach involves constructing a regression model within a structured machine learning pipeline, which will facilitate the identification of relationships between the input features and the target variable. Furthermore, the plan is to conduct hyperparameter optimization to maximize the accuracy of our predictions.
+
+
+### Business Requirement 2
+To predict if a student's performance has improved, we will that dataset to calculate the difference between studets previous and Exam scores. This analysis will help us develop a binary classification model to predict improvements. By using a structured machine learning pipeline, we can explore the relationships between various factors and the likelihood of score improvement. Additionally, we will conduct thorough hyperparameter optimization to enhance our model's accuracy in predicting student performance.
+
 
 -------------
 
@@ -152,6 +163,10 @@ This page explores the hypotheses regarding the Students to improve theire Exam 
 
 ### Page 6: ML Success Predictor
 Evaluates and showcases the performance of a Students prediction models. The page presents the complete machine learning pipelines, including data cleaning, feature engineering, and modeling. It highlights feature importance and provides a detailed summary of the model's predictive performance.
+
+-------
+
+## The Dataset and the Models
 
 -----
 
