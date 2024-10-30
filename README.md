@@ -36,14 +36,41 @@
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size and to have a shorter model training time. If you are doing an image recognition project, we suggest you consider using an image shape that is 100px × 100px or 50px × 50px, to ensure the model meets the performance requirement but is smaller than 100Mb for a smoother push to GitHub. A reasonably sized image set is ~5000 images, but you can choose ~10000 lines for numeric or textual data. 
+
+The dataset is obtained from **Kaggle** and includes data on various attributes that can affect student performance. Each entry in the dataset corresponds to an individual student. It is important to emphasize that the dataset has been generated randomly. According to the sources on the Data Card, the "Student Performance Factors" dataset is a synthetic dataset created for educational and analytical purposes. It is not sourced from any real-world institutions but is designed to simulate realistic scenarios for analyzing factors that affect student performance. 
 
 
+| Field                     | Data Type | Description                                                                                     |
+| ------------------------- | --------- | ----------------------------------------------------------------------------------------------- |
+| Hours_Studied             | Number    | Number of hours spent studying per week.                                                |
+| Attendance                | Number    | Percentage of classes attended.                                                        |
+| Parental_Involvement      | Object    | Level of parental involvement in the student's education (Low, Medium, High)             |
+| Access_to_Resources       | Object    | Availability of educational resources (Low, Medium, High).                                        |
+| Extracurricular_Activities| Object    | Participation in extracurricular activities (Yes, No).                                      |
+| Sleep_Hours               | Number    | number of hours of sleep per night.                                               |
+| Previous_Scores           | Number    | Scores from previous exams.                                                               |
+| Motivation_Level          | Object    | Student's level of motivation (Low, Medium, High).                                               |
+| Internet_Access           | Object    | Availability of internet access (Yes, No). |
+| Tutoring_Sessions         | Number    |	Number of tutoring sessions attended per month. |
+| Family_Income	          | Object    | Family income level (Low, Medium, High). |
+| Teacher_Quality           | Object    | Quality of the teachers (Low, Medium, High). |
+| School_Type               | Object    |	Type of school attended (Public, Private). |
+| Peer_Influence	          | Object    | Influence of peers on academic performance (Positive, Neutral, Negative). |
+| Physical_Activity	       | Number    | Average number of hours of physical activity per week. |
+| Learning_Disabilities	    | Object    | Presence of learning disabilities (Yes, No). |
+| Parental_Education_Level	 | Object    | Highest education level of parents (High School, College, Postgraduate). |
+| Distance_from_Home	       | Object    | Distance from home to school (Near, Moderate, Far). |
+| Gender	                   | Object    | Gender of the student (Male, Female). |
+| Exam_Score	             | Number    | Final exam score |
+
+
+The dataset can also be seen here on [Kaggle](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors).
 ## Business Requirments
 
 * What are the requirments for improving you exam scores.
 
 * What are the features that have an effect on the stundent grad.
+This dataset is useful for exploring correlations between these factors and performance metrics such as grades, providing insights for educators and policy makers on factors that may influence student success.
 
 * The school what to see a visual display on the correlation that effects the score of the students
 
