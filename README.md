@@ -36,7 +36,7 @@ Introduction
 
 ## Dataset Content
 
-The dataset is obtained from **Kaggle** and includes data on various attributes that can affect student performance. Each entry in the dataset corresponds to an individual student. It is important to emphasize that the dataset has been generated randomly. According to the sources on the Data Card, the "Student Performance Factors" dataset is a synthetic dataset created for educational and analytical purposes. It is not sourced from any real-world institutions but is designed to simulate realistic scenarios for analyzing factors that affect student performance. 
+The dataset is obtained from **Kaggle** and includes data on various attributes that can affect student performance. Each entry in the dataset corresponds to an individual student. It is important to emphasize that the dataset has been generated randomly and this only targets students that have a passing grade. According to the sources on the Data Card, the "Student Performance Factors" dataset is a synthetic dataset created for educational and analytical purposes. It is not sourced from any real-world institutions but is designed to simulate realistic scenarios for analyzing factors that affect student performance. 
 
 
 | Field                     | Data Type | Description                                                                                     |
@@ -60,7 +60,7 @@ The dataset is obtained from **Kaggle** and includes data on various attributes 
 | Parental_Education_Level	 | Object    | Highest education level of parents (High School, College, Postgraduate). |
 | Distance_from_Home	       | Object    | Distance from home to school (Near, Moderate, Far). |
 | Gender	                   | Object    | Gender of the student (Male, Female). |
-| Exam_Score	             | Number    | Final exam score |
+| Exam_Score	             | Number    | Final exam score (Procent)|
 
 
 The dataset can also be seen here on [Kaggle](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors).
@@ -80,11 +80,43 @@ he client for this project is a school district that wants to identify the resou
 -------------
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+
+### Hypothesis
+
+#### Hypothesis 1
+If students have high attendance and spend a significant number of hours studying, they are more likely to achieve a higher grade (over 75).
+
+
+#### Hypothesis 2
+The education level of the students' parents does not have a significant impact on the students' final exam scores.
+
+#### Hypothesis 3
+For the students to improve their scores, students need to focus on attending lectures, participating in tutoring sessions, and increasing their study hours.
+
+### Validation and Conclusion 
+
+#### Hypothesis 1
+
+This can be confirmed by analyzing the dataset and performing correlation studies, including the use of heatmaps.
+
+**Conclusion**
+
+#### Hypothesis 2
+
+This can be confirmed by analyzing the dataset and performing correlation studies, including the use of heatmaps.
+
+**Conclusion**
+
+#### Hypothesis 3
+This can been seen in the on the best features for the ML Pipeline that predict in the students will improve there score or not.
+
+**Conclusion**
+
 
 -------------
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
+
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
 
 -------------
