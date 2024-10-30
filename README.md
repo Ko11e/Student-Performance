@@ -143,30 +143,35 @@ To predict if a student's performance has improved, we will that dataset to calc
 * Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 
 ### Page 1: Quick Project Summary
-This section of the dashboard provides a concise overview of the project's objectives and functionalities
 
-### Page 2: Exploratory Analysis of the Data
-This page provides an interactive dashboard for exploring Student performance data to identify key factors 
+- Introduce the project and its motivation
+- Provide an overview of the dataset used
+- Display the first ten rows of the dataset
+- Outline the business requirements
 
-The dashboard includes data visualizations to highlight relationships between clinical variables and IVF outcomes, assisting in data-driven decision-making.
-
-#### Introduction and Data Inspection:
-
-
-### Page 3: Project Hypothesis and Validation
+### Page 2: Project Hypothesis and Validation
 
 This page explores the hypotheses regarding the Students to improve theire Exam Score, using data analysis and visualization to validate or refute each hypothesis.
 
-### Page 4: Stundens Exam Score Predictor
+### Page 3: Exploratory Analysis of the Data
+This page provides an interactive dashboard for exploring Student performance data to identify key factors 
 
-### Page 5: Predictor of improving the Students score
+The dashboard includes data visualizations to highlight relationships .
+
+
+### Page 4: Students Exam Score Predictor
+
+### Page 5: Improvement of score Predictor 
 
 ### Page 6: ML Success Predictor
-Evaluates and showcases the performance of a Students prediction models. The page presents the complete machine learning pipelines, including data cleaning, feature engineering, and modeling. It highlights feature importance and provides a detailed summary of the model's predictive performance.
+Evaluate and showcase the performance of a Student prediction models. The page presents the complete machine learning pipelines, including data cleaning, feature engineering, and modeling. It highlights feature importance and provides a detailed summary of the model's predictive performance.
 
 -------
 
 ## The Dataset and the Models
+
+**Regresson**
+
 
 -----
 
