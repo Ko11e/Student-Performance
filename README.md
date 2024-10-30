@@ -4,36 +4,33 @@ Introduction
 
 ## Table of contents
 
-1. [Introduction](#introduction)
-2. [Dataset Content](#dataset-content)
-   - [Dataset Overview](#dataset-overview)
-   - [Data Requirements for Model Training](#data-requirements-for-model-training)
-3. [Business Requirements](#business-requirements)
+1. [Dataset Content](#dataset-content)
+2. [Business Requirements](#business-requirements)
    - [Exam Score Improvement Criteria](#exam-score-improvement-criteria)
    - [Features Influencing Student Grades](#features-influencing-student-grades)
    - [Correlation Visualization for Student Performance](#correlation-visualization-for-student-performance)
-4. [Hypothesis and Validation](#hypothesis-and-validation)
+3. [Hypothesis and Validation](#hypothesis-and-validation)
    - [Hypotheses for Project](#hypotheses-for-project)
    - [Validation Methods](#validation-methods)
-5. [Rationale Mapping](#rationale-mapping)
+4. [Rationale Mapping](#rationale-mapping)
    - [Mapping Business Requirements to Data Visualizations and ML Tasks](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
-6. [ML Business Case](#ml-business-case)
+5. [ML Business Case](#ml-business-case)
    - [Framing the ML Business Case](#framing-the-ml-business-case)
-7. [Dashboard Design](#dashboard-design)
+6. [Dashboard Design](#dashboard-design)
    - [Dashboard Pages and Content](#dashboard-pages-and-content)
    - [Dashboard Feature Updates](#dashboard-feature-updates)
-8. [Bugs](#bugs)
+7. [Bugs](#bugs)
    - [Fixed Bugs](#fixed-bugs)
    - [Unfixed Bugs](#unfixed-bugs)
-9. [Deployment](#deployment)
+8. [Deployment](#deployment)
    - [Heroku Deployment Steps](#heroku-deployment-steps)
    - [Cloud IDE Reminders](#cloud-ide-reminders)
-10. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+9. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
     - [Libraries Used and Usage Examples](#libraries-used-and-usage-examples)
-11. [Credits](#credits)
+10. [Credits](#credits)
     - [Content References](#content-references)
     - [Media References](#media-references)
-12. [Acknowledgements (Optional)](#acknowledgements-optional)
+11. [Acknowledgements (Optional)](#acknowledgements-optional)
 
 -------------
 
@@ -72,12 +69,13 @@ The dataset can also be seen here on [Kaggle](https://www.kaggle.com/datasets/la
 
 ## Business Requirments
 
-* What are the requirments for improving you exam scores.
+he client for this project is a school district that wants to identify the resources schools need to focus on to improve student performance. The client would like to address the following business requirements:
 
-* What are the features that have an effect on the stundent grad.
-This dataset is useful for exploring correlations between these factors and performance metrics such as grades, providing insights for educators and policy makers on factors that may influence student success.
+* **Business Requirement 1**: The client wants to understand which factors have the most significant impact on students' grades. They seek a visual representation and exploration of the correlations between these factors and performance metrics such as grades. This will provide insights for educators and policymakers on elements that may influence student success.
 
-* The school what to see a visual display on the correlation that effects the score of the students
+* **Business Requirement 2**: The client aims to predict students' exam scores based on their resources.
+
+* **Business Requirement 3**: The client wants to predict whether a student will improve their score based on their previous scores.
 
 -------------
 
