@@ -3,8 +3,8 @@ from app_pages.multipage import MultiPage
 
 # load pages scripts
 from app_pages.page_summary import page_summary_body
-from app_pages.page_1 import page1_body
-from app_pages.page_2 import page2_body
+from app_pages.page_project_hypotheses import page1_body
+from app_pages.page_ml_student_exam_score_predictore import page2_body
 
 
 # Create an instance of the app
