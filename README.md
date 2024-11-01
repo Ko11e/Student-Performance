@@ -230,12 +230,7 @@ All code in the app_pages and src directories was validated as conforming to PEP
 
 ## Bugs
 
-### Fixed 
-
-### Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
-
-
+No major buges under the project
 
 ## Deployment
 ### Heroku
@@ -251,6 +246,7 @@ All code in the app_pages and src directories was validated as conforming to PEP
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+
 ### Cloud IDE Reminders
 
 To log into the Heroku toolbelt CLI:
@@ -262,12 +258,34 @@ To log into the Heroku toolbelt CLI:
 5. Paste in your API key when asked
 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+**Libraries Used:**
 
+- **pandas**: For data manipulation, reading, and saving datasets.
+- **numpy**: For performing numerical operations.
+- **matplotlib.pyplot**: For data visualization, including feature importance plots.
+- **seaborn**: Specializes in data visualization, particularly for creating plots and exploring data.
+- **scipy.stats**: Contains statistical functions for data analysis.
+- **plotly.express**: Used for creating interactive plots for data visualization.
+- **plotly.graph_objects**: Allows for detailed customization of Plotly plots.
+- **joblib**: Efficiently saves and loads machine learning models.
+- **gzip**: Facilitates handling compressed files.
+- **feature_engine**: Provides feature engineering capabilities, including encoding, imputation, handling outliers, selection, and transformation.
+- **imblearn_learn**: Addresses class imbalance by generating synthetic samples.
+- **sklearn**: A comprehensive machine learning toolkit with submodules for various tasks, including data preprocessing, model building, evaluation, and feature selection.
+- **ydata_profiling**: Automates data profiling for exploratory data analysis.
+- **yellowbrick.cluster**: Offers clustering visualizations, such as KElbowVisualizer and 
+-**Streamlit**:Build the web app.
+
+**Other Technologies**
+
+- **Git**: For version control
+- **GitHub**: Code repository
+- **Heroku**: For application deployment
+- **Gitpod**:Cloud IDE used for development
+- **Jupyter Notebook**:Interactive Python
+- **CI Python Linter**: Style guide for python
 
 ## Credits 
 
