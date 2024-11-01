@@ -100,18 +100,31 @@ For the students to improve their scores, students need to focus on attending le
 This can be confirmed by analyzing the dataset and performing correlation studies, including the use of heatmaps.
 
 **Conclusion**
+The data indicates that there in a trende that shows of the student having a higher changes of getting a higher Exam Score if they a higher attendance and houres stuidied. But there are nothigh that support the statmate the student will have a higher change to get a score that is higher then 75.
+
+This will conclude that this hypothesis will be rejected
 
 #### Hypothesis 2
 
 This can be confirmed by analyzing the dataset and performing correlation studies, including the use of heatmaps.
 
 **Conclusion**
+The median value for the education level of students' parents is relatively similar, but a closer look reveals a slight trend. Students tend to have better Exam score when their parents have higher educational backgrounds. However, the trend is so smale that it have no significat infuance in the students Exam score. There is also shown that Parental_Education_Level is one of the importent features when trying to predict if student can impove theire score. This lead to that this hypothersis will be redject since the data shows a smale trend that disproves the hypothesis. 
 
 #### Hypothesis 3
 This can been seen in the on the best features for the ML Pipeline that predict in the students will improve there score or not.
 
 **Conclusion**
+In the pipline where the model is train to see if the student can imporve there score it can be seen that the the more important feature for the prediction is the students success is 
+* Attendance
+* Tutoring_Sessions
+* Hours_Studied
+* Sleep_Hours
+* Physical_Activity
+* Parental_Education_Level
+* Parental_Involvement
 
+Where the first three features are the ones with the highers influance on the training of the model. In conclusion tha data strongly support the hypothesis and will **not** be redjected.
 
 -------------
 
@@ -139,32 +152,38 @@ To predict if a student's performance has improved, we will that dataset to calc
 
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 
 ### Page 1: Quick Project Summary
 
 - Introduce the project and its motivation
+   - link to README
 - Provide an overview of the dataset used
-- Display the first ten rows of the dataset
+   - Display the first ten rows of the dataset
 - Outline the business requirements
 
 ### Page 2: Project Hypothesis and Validation
 
-This page explores the hypotheses regarding the Students to improve theire Exam Score, using data analysis and visualization to validate or refute each hypothesis.
+This page displays the three hypotheses and utilizes data analysis and visualization to validate or reject each hypothesis.
 
 ### Page 3: Exploratory Analysis of the Data
-This page provides an interactive dashboard for exploring Student performance data to identify key factors 
+This page provides an interactive dashboard for exploring Student performance data to identify key factors. 
 
-The dashboard includes data visualizations to highlight relationships .
+The dashboard includes data visualizations to highlight relationships.
 
 
 ### Page 4: Students Exam Score Predictor
 
+This page will contain the second business requirement which involves implementing a feature for inputting data and generating predictions. This includes creating widget inputs where users can enter the necessary data for the prediction. Additionally, there will be a "Run Prediction" button that, when clicked, runs the inputted data through the machine learning model, producing a prediction. 
+<!-- along with a probability percentage. -->
+
 ### Page 5: Improvement of score Predictor 
 
-### Page 6: ML Success Predictor
-Evaluate and showcase the performance of a Student prediction models. The page presents the complete machine learning pipelines, including data cleaning, feature engineering, and modeling. It highlights feature importance and provides a detailed summary of the model's predictive performance.
+This page will contain the third business requirement which involves implementing a feature for inputting data and generating predictions. This includes creating widget inputs where users can enter the necessary data for the prediction. Additionally, there will be a "Run Prediction" button that, when clicked, runs the inputted data through the machine learning model, producing a prediction.
+<!-- along with a probability percentage. -->
+
+### Page 6: ML Predictor preformens 
+
+The document provides a summary of the model's performance and key metrics, detailing the overall effectiveness and accuracy of the model. It also outlines the model pipeline and describes the features used for training, explaining the selection criteria for each feature. Additionally, the document includes comprehensive documentation of the model's performance across both the training and testing datasets, highlighting any differences in accuracy, variance, and potential areas for improvement.
 
 -------
 
@@ -195,6 +214,8 @@ All code in the app_pages and src directories was validated as conforming to PEP
 
 ### Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+
 
 ## Deployment
 ### Heroku
