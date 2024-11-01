@@ -213,12 +213,15 @@ The document provides a summary of the model's performance and key metrics, deta
 
 Despite extensive efforts to understand the data and identify correlations or insignificant features, the dataset lacks sufficient predictive power to develop a reliable model. Upon examining the data, it is evident that most features follow a normal distribution concerning the exam scores. However, there are no standout elements in the dataset that significantly impact the ability to predict trends, this can also be seen in the section about the cluster model. This limitation makes the analysis narrow and difficult to interpret. 
 
+### Exam Score predictor
+
 Various pipelines have been tested to evaluate the R² value. The data does not contain many missing values, which makes the cleaning process relatively straightforward. Different approaches were explored to possibly improve the model. The conclusion was to implement three different strategies for handling the missing data. The first strategy involved replacing NaN values with the word "Missing," the second involved filling them with the most frequent value, and the third involved removing rows with NaN values. However, none of the strategies proved to be better than the others, leading to the decision to retain the first strategy.
 
-**Regression**
+#### Regression
 
-When trying to find the best model this first approach was to find a model using Regression.
-The ambition was to have an accuracy of R² over 0.70 which was not achieved in the first attempt. The best algorithm was LinnearRegression and had a value of 0.64. When trying to optimize the model Even though the use hyperparamertes the maximum mean value was 0.64. When trying to find the best hyperparamerter was ChatGPT used to minize the proccessing time and preventing my computer from crasching. Although somthing that can be seen then ploting the evaluation of the model is a cluster in the righthand corner, which is the tail of the target distubution. This is the reason for the lower value in R² and the RMSE being a higher value. 
+In the initial attempt to find the best model, we focused on using regression models. Our goal was to achieve an R² accuracy of over 0.70. However, we did not succeed in our first try. The most effective algorithm we found was Linear Regression, which yielded an R² value of 0.64. While trying to optimize the model through hyperparameter tuning, the maximum mean value we achieved remained at 0.64. A detailed comparison of different models and hyperparameters can be found **[here](/MODEL-TEST.md)**.
+
+To help minimize processing time and prevent my computer from crashing during the hyperparameter search, I utilized ChatGPT to optimize the test. However, upon plotting the model evaluation, we noticed a cluster in the right-hand corner, which corresponds to the tail of the target distribution. This clustering is likely responsible for the lower R² value and stile a relatively low RMSE.
 
 **Evaluation plot LinearRegression**
 
@@ -229,19 +232,15 @@ The next algorithem that was tested was KNeighborsRegressor which is a non-param
 
 Forward the pipeline was built using PCA. This however resulted in a lower accarcy and needed all the feature to built the model. This Pipline was not tested  with hyperparameters since the R² value was lower then 0.4. 
 
-**Classification**
+### Classification
 
-**Exam Score predictor**
+Since the previuse models did not succssed in reatching the R² value of 0.70 the next appotch was to us Classification by dividing the taget in to catagorige with the same number of datapoint. Due to the distrubusion of the taget the sizing of the spans was `['<64.0', '64.0 to 66.0', '66.0 to 68.0', '68.0 to 70.0','+70.0']`. Even thoght this model had a high value in the recall the model only predicted <64.0, +70.0 making the accuracy to 0.33.
 
-When finding a model to predict the Improvement of a studenets Exam score from the previuse score the builiding of the  the finall approch was 
-
-**Predict improved score**
- 
-**Cluster**
+### Cluster
 
 A clustering model was also developed, but it revealed that the data does not form well-defined clusters, making it ineffective for identifying correlations between conditions and Exam Score. the Silhouette analysis showed an loser then average Silhouette Score of approximately 0.32, indicating a lack of well-defined clusters, as values close to zero suggest poor clustering structure. 
 
-This lack of separation is clearly evident in the cluster plot, which show that the data points do not form distinct clusters, further demonstrating the challenges in identifying meaningful patterns related to Exam Scores. Leading to no futher investigation in the cluster modle.
+This lack of separation is clearly evident in the cluster plot, which show that the data points do not form distinct clusters, further demonstrating the challenges in identifying meaningful patterns related to Exam Scores. Leading to no futher investigation in the cluster model.
 
 **Cluster Silhouette Analysis:**
 
@@ -250,13 +249,23 @@ This lack of separation is clearly evident in the cluster plot, which show that 
 **Cluster plot:**
 
 ![Cluster plot](/images/cluster-scatter.png)
+
+### Conclusion
+
+In conclusion, while various approaches were explored to achieve an R² accuracy above 0.70, the analysis faced several limitations. Linear Regression yielded the highest R² score of 0.64, but further tuning failed to improve performance. Alternative methods, including KNeighborsRegressor, PCA, classification, and clustering, were tested, but none provided significant gains. The clustering model particularly showed that the data lacks well-defined patterns, as evidenced by a low Silhouette Score. Ultimately, due to clustering and classification challenges, combined with limited gains from regression and hyperparameter optimization, Linear Regression with NaN values replaced by "Missing" was retained as the optimal model setup.
+
+## Predict improved score
+ 
+### Classification
+
+
 -----
 
 ## Testing
 
 ### Manuel test
 
-
+The testing documentation for this project is available in another document. To access information about the testing, please click on the following link: TESTING.md
 
 ### Automated test
 
