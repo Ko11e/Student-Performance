@@ -15,8 +15,8 @@ app = MultiPage(app_name="Exam Score Predictor")
 app.add_page("Quick Project Summary", page_summary_body)
 app.add_page("Project Hypothesis and Validation", page_hypothesis_o_validation_body)
 app.add_page("Exploratory Analysis of the Data", page_analysis_body)
-app.add_page("Prediction of Student Exam Score", ML_prediction_exam_score)
-app.add_page("ML: Predict Exam score", page_ML_predict_student_exam_body)
+app.add_page("Live Predictor", ML_prediction_exam_score)
+app.add_page("ML: Predict Exam score and Improv Score", page_ML_predict_student_exam_body)
 
 
 app.run()
