@@ -152,12 +152,11 @@ To predict if a student's performance has improved, we will that dataset to calc
 
 ## Dashboard Design
 
-
 ### Page 1: Quick Project Summary
 
 - Introduce the project and its motivation
    - link to README
-- Provide an overview of the dataset used
+- Provide an overview of the dataset
    - Display the first ten rows of the dataset
 - Outline the business requirements
 
@@ -189,7 +188,28 @@ The document provides a summary of the model's performance and key metrics, deta
 
 ## The Dataset and the Models
 
-**Regresson**
+Despite extensive efforts to understand the data and identify correlations or insignificant features, the dataset lacks sufficient predictive power to develop a reliable model. Upon examining the data, it is evident that most features follow a normal distribution concerning the exam scores. However, there are no standout elements in the dataset that significantly impact the ability to predict trends, this can also be seen in the section about the cluster model. This limitation makes the analysis narrow and difficult to interpret. 
+
+Various pipelines have been tested to evaluate the R² value. The data does not contain many missing values, which makes the cleaning process relatively straightforward. Different approaches were explored to possibly improve the model. The conclusion was to implement three different strategies for handling the missing data. The first strategy involved replacing NaN values with the word "Missing," the second involved filling them with the most frequent value, and the third involved removing rows with NaN values. However, none of the strategies proved to be better than the others, leading to the decision to retain the first strategy.
+
+**Regression**
+
+When trying to find the best model this first approach was to find a model using Regression.
+The ambition was to have an accuracy of R² over 0.70 which was not achieved in the first attempt. The best algorithm was LinnearRegression and had a value of 0.64. When trying to optimize the model Even though the use hyperparamertes the maximum mean value was 0.64. When trying to find the best hyperparamerter was ChatGPT used to minize the proccessing time and preventing my computer from crasching. Although somthing that can be seen then ploting the evaluation of the model is a cluster in the righthand corner, which is the tail of the target distubution. This is the reason for the lower value in R² and the RMSE being a higher value. 
+
+The next algorithem that was tested was KNeighborsRegressor which is a non-parametric regression method that predicts values based on the k closest training data points. It stores the training data and uses a distance metric, usually Euclidean distance, to make predictions.For each prediction, the average of the target values of the k nearest points is calculated. This can be done with uniform weighting or by considering distance. Choosing the right value for k is crucial: smaller values may result in high variance, while larger values can lead to high bias. Therefore, the function was created to the optimal k-value, along with the mean R² value. The optimail k-value was 19, but the R² value was 0.47 at the maximum.
+
+Forward the pipeline was built using PCA. This however resulted in a lower accarcy and needed all the feature to built the model. This Pipline was not tested  with hyperparameters since the R² value was lower then 0.4. 
+
+**Classification**
+
+
+
+When finding a model to predict the Improvement of a studenets Exam score from the previuse score the builiding of the  the finall approch was 
+ 
+**Cluster**
+
+
 
 
 -----
