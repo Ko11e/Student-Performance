@@ -146,9 +146,32 @@ To predict if a student's performance has improved, we will that dataset to calc
 -------------
 
 ## ML Business Case
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+### Predicting Exam score
 
- ------------
+#### Regression Model
+
+- A machine learning (ML) model was developed to predict the the score a student will get based on historical data. The target variable is numerical and has a value from 50 to 100 which represents the percent of correct answers. The goal is to provide a school district with actionable insights to optimize the teaching or recommendation for the students to succeed.
+
+- Model Success Metrics and Rationale:
+
+  - **R² ≥ 70%**
+  - **RMSE ≤ 5**
+
+
+These metrics ensure that the model not only performs well statistically but also provides meaningful and actionable.
+
+## Predicting improvement of the score
+
+### Classification
+
+An ML model was developed to predict whether or not the student will improve their score based on the factors the school can provide and the factors from home. The result whether the student improves their score or not will be presented with a 1 or a 0, respectively
+
+Model Success Metrics:
+- **Accuracy ≥ 70%**
+- **Precision for not Improved ≥ 70%**
+- **F1 Score ≥ 70%**:
+
+------------
 
 ## Dashboard Design
 
@@ -208,9 +231,11 @@ Forward the pipeline was built using PCA. This however resulted in a lower accar
 
 **Classification**
 
-
+**Exam Score predictor**
 
 When finding a model to predict the Improvement of a studenets Exam score from the previuse score the builiding of the  the finall approch was 
+
+**Predict improved score**
  
 **Cluster**
 
