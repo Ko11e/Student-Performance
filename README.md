@@ -197,6 +197,11 @@ Various pipelines have been tested to evaluate the R² value. The data does not 
 When trying to find the best model this first approach was to find a model using Regression.
 The ambition was to have an accuracy of R² over 0.70 which was not achieved in the first attempt. The best algorithm was LinnearRegression and had a value of 0.64. When trying to optimize the model Even though the use hyperparamertes the maximum mean value was 0.64. When trying to find the best hyperparamerter was ChatGPT used to minize the proccessing time and preventing my computer from crasching. Although somthing that can be seen then ploting the evaluation of the model is a cluster in the righthand corner, which is the tail of the target distubution. This is the reason for the lower value in R² and the RMSE being a higher value. 
 
+**Evaluation plot LinearRegression**
+
+![Evaluation plot with the model LinearRegression]()
+
+
 The next algorithem that was tested was KNeighborsRegressor which is a non-parametric regression method that predicts values based on the k closest training data points. It stores the training data and uses a distance metric, usually Euclidean distance, to make predictions.For each prediction, the average of the target values of the k nearest points is calculated. This can be done with uniform weighting or by considering distance. Choosing the right value for k is crucial: smaller values may result in high variance, while larger values can lead to high bias. Therefore, the function was created to the optimal k-value, along with the mean R² value. The optimail k-value was 19, but the R² value was 0.47 at the maximum.
 
 Forward the pipeline was built using PCA. This however resulted in a lower accarcy and needed all the feature to built the model. This Pipline was not tested  with hyperparameters since the R² value was lower then 0.4. 
@@ -209,9 +214,17 @@ When finding a model to predict the Improvement of a studenets Exam score from t
  
 **Cluster**
 
+A clustering model was also developed, but it revealed that the data does not form well-defined clusters, making it ineffective for identifying correlations between conditions and Exam Score. the Silhouette analysis showed an loser then average Silhouette Score of approximately 0.32, indicating a lack of well-defined clusters, as values close to zero suggest poor clustering structure. 
 
+This lack of separation is clearly evident in the cluster plot, which show that the data points do not form distinct clusters, further demonstrating the challenges in identifying meaningful patterns related to Exam Scores. Leading to no futher investigation in the cluster modle.
 
+**Cluster Silhouette Analysis:**
 
+![Cluster Silhouette Analysis](/images/cluster-silhouette.png)
+
+**Cluster plot:**
+
+![Cluster plot](/images/cluster-scatter.png)
 -----
 
 ## Testing
