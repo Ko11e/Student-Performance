@@ -8,9 +8,9 @@ import numpy as np
 def regression_performance(X_train, y_train, X_test, y_test, pipeline):
     st.write("## Model Evaluation ")
     st.info("#### Train Set")
-    st.code(regression_evaluation(X_train, y_train, pipeline))
+    regression_evaluation(X_train, y_train, pipeline)
     st.info("#### Test Set")
-    st.code(regression_evaluation(X_test, y_test, pipeline))
+    regression_evaluation(X_test, y_test, pipeline)
 
 
 def regression_evaluation(X, y, pipeline):
