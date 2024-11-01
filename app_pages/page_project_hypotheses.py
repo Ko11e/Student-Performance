@@ -38,9 +38,11 @@ def page_hypothesis_o_validation_body():
         relatively similar, but a closer look reveals a slight trend. Students 
         tend to have better Exam score when their parents have 
         higher educational backgrounds. However, the trend is so smale that 
-        it have no significat infuance in the students Exam score. This lead 
-        to that this hypothersis will be redject since the data stile shows 
-        a smale trend the disprove the hypothesis. 
+        it have no significat infuance in the students Exam score. There is 
+        also shown that Parental_Education_Level is one of the importent features when 
+        trying to predict if student can impove theire score.
+        This lead to that this hypothersis will be redject since the data shows 
+        a smale trend that disproves the hypothesis. 
         """
     )
     st.success(
@@ -54,7 +56,20 @@ def page_hypothesis_o_validation_body():
     st.warning(
         """
         #### Conclusion
+        In the pipline where the model is train to see if the student can imporve 
+        there score it can be seen that the the more important feature for the 
+        prediction is the students success is 
+        * Attendance
+        * Tutoring_Sessions
+        * Hours_Studied
+        * Sleep_Hours
+        * Physical_Activity
+        * Parental_Education_Level
+        * Parental_Involvement
 
+        Where the first three features are the ones with the highers influance 
+        on the training of the model. In conclusion tha data strongly support 
+        the hypothesis and will **not** be redjected.
 
         """
     )
