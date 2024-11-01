@@ -1,8 +1,8 @@
 numpy==1.21.1
 pandas==1.5.1
-matplotlib==3.8.4
+matplotlib==3.6.1
 seaborn==0.13.0
-ydata-profiling==4.0.0
+# ydata-profiling==4.0.0
 plotly==5.22.0
 ppscore==1.3.0
 
