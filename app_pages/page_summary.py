@@ -1,7 +1,10 @@
 import streamlit as st
+from src.data_management import load_student_data
 
 
 def page_summary_body():
+
+    df = load_student_data()
 
     st.write("### Quick Project Summary")
 
@@ -38,8 +41,14 @@ def page_summary_body():
 
         Dataset Observations: The dataset contains a total of 6607 observations.
         """
-        # MAke a box to see dataset
     )
+    if st.checkbox("Inspect dataset"):
+        st.write(
+            f"Below can the first 10 rows of the dataset."
+        )
+        st.write(df.head(10))
+
+    st.write("---")
 
     st.info(
         """
