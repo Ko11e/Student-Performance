@@ -27,24 +27,35 @@ def page_hypothesis_o_validation_body():
     st.success(
         """
         ## Hypothesis 2
-        The education level of the students' parents does not have a significant impact on the students' final exam scores.
+        The education level of the students' parents does not have 
+        a significant impact on the students' final exam scores.
         """
     )
     st.warning(
         """
         #### Conclusion
-        
+        The median value for the education level of students' parents is 
+        relatively similar, but a closer look reveals a slight trend. Students 
+        tend to have better Exam score when their parents have 
+        higher educational backgrounds. However, the trend is so smale that 
+        it have no significat infuance in the students Exam score. This lead 
+        to that this hypothersis will be redject since the data stile shows 
+        a smale trend the disprove the hypothesis. 
         """
     )
     st.success(
         """
         ## Hypothesis 3
-        For the students to improve their scores, students need to focus on attending lectures, participating in tutoring sessions, and increasing their study hours.
+        For the students to improve their scores, students need to focus on 
+        attending lectures, participating in tutoring sessions, 
+        and increasing their study hours.
         """
     )
     st.warning(
         """
         #### Conclusion
+
+
         """
     )
 
