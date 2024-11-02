@@ -8,10 +8,6 @@ def page_hypothesis_o_validation_body():
 
     df = load_student_data()
 
-    st.write(
-        "This is the first page"
-    )
-
     st.success(
         """
         ## Hypothesis 1
@@ -34,9 +30,7 @@ def page_hypothesis_o_validation_body():
     if st.checkbox("Visualize Graf"):
         st.write(
             """
-            _**Relationship between hours Studied and Exam scores with
-            
-        Distrubusion oven Studied Houres, Attendance and Exam score**_
+            _**Distrubusion oven Studied Houres, Attendance and Exam score**_
             """
         )
         st.write(

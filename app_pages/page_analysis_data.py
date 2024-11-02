@@ -1,5 +1,14 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import ppscore as pps
+import plotly.express as px
+import matplotlib.patheffects as path_effects
+import matplotlib.pyplot as plt
+
 from src.machine_learning.plot_functions import (
+    add_median_labels,
     CalculateCorrAndPPS,
     heatmap_corr,
     heatmap_pps
@@ -12,7 +21,19 @@ def page_analysis_body():
     df = load_student_data()
 
     to_plot = [
+        "Correlation Studied Houres, Attendance and Exam score ",
+        "Distribution Score, Parental education level",
+        "Interactive Plot"
+    ]
 
+    y_varibels = [
+        'Distance_from_Home',
+        'School_Type',
+        'Teacher_Quality', 
+        'Family_Income',
+        'Parental_Involvement',
+        'Extracurricular_Activities',
+        'Exam_Score'
     ]
 
     st.write(
@@ -115,9 +136,38 @@ def page_analysis_body():
             index=0
         )
 
-        if selected_variable == "Parallel Plot":
-            display_parallel_plot(df_eda)
-        else:
-            st.write(f"### Plots for: {selected_variable}")
-            display_selected_plots(df_eda, selected_variable,
-                                   "Live birth occurrence")
+        if selected_variable == "Interactive Plot":
+            dfe = df.filter(y_varibels)
+
+            display_interactive_plot(dfe, y_varibels)
+
+        elif selected_variable == "Correlation Studied Houres, Attendance and Exam score ":
+            st.write(
+            """
+            _**Distrubusion oven Studied Houres, Attendance and Exam score**_
+            """
+            )
+            plt.figure(figsize=(12, 6))
+            sns.scatterplot(data=df, x="Exam_Score", y="Hours_Studied", hue="Attendance")
+            st.pyplot(plt.gcf())
+
+        elif selected_variable == "Distribution Score, Parental education level":
+            st.write("_**Distribution of exam scores based on parental education levels**_")
+        
+            plt.figure(figsize=(12, 6))
+        
+            ax = sns.boxplot(data=df, x='Exam_Score', hue='Parental_Education_Level')
+            add_median_labels(ax)
+            st.pyplot(plt.gcf())
+        
+
+def display_interactive_plot(dfe, y):
+    try:
+        y.remove('Exam_Score')
+    except:
+        pass
+    
+    y_axis_val = st.selectbox('Select the Y-axis', options=y )
+
+    plot = px.box(dfe, x='Exam_Score', y=y_axis_val)
+    st.plotly_chart(plot, use_container_width=True)
