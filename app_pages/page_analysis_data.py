@@ -86,6 +86,12 @@ def page_analysis_body():
         heatmap_pps(df=pps_matrix, threshold=0.1)
 
     st.write('----')
+    st.write(
+        """
+        Below are some conclusions that have been made by
+        performing a data annalysis and correlation study and dataset. 
+        """
+    )
 
     st.info(
         """
