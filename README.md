@@ -1,36 +1,22 @@
 # Student performence
 
-Introduction
+This project aims to help a school district improve student outcomes by analyzing factors that influence student performance. By examining various student-related attributes, the project investigates how different conditions correlate with exam scores and predicts future scores based on student resources. The analysis includes exploring data correlations, testing hypotheses, and building a predictive machine learning model to assist educators in identifying and prioritizing key influences on academic success.
+
+The deployed project can be accessed [here]()
 
 ## Table of contents
 
 1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
-   - [Exam Score Improvement Criteria](#exam-score-improvement-criteria)
-   - [Features Influencing Student Grades](#features-influencing-student-grades)
-   - [Correlation Visualization for Student Performance](#correlation-visualization-for-student-performance)
-3. [Hypothesis and Validation](#hypothesis-and-validation)
-   - [Hypotheses for Project](#hypotheses-for-project)
-   - [Validation Methods](#validation-methods)
-4. [Rationale Mapping](#rationale-mapping)
-   - [Mapping Business Requirements to Data Visualizations and ML Tasks](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
+3. [Hypotheses and Validation](#hypotheses-and-validation)
+4. [Rationale Mapping](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-taskshe-rationale)
 5. [ML Business Case](#ml-business-case)
-   - [Framing the ML Business Case](#framing-the-ml-business-case)
 6. [Dashboard Design](#dashboard-design)
-   - [Dashboard Pages and Content](#dashboard-pages-and-content)
-   - [Dashboard Feature Updates](#dashboard-feature-updates)
-7. [Bugs](#bugs)
-   - [Fixed Bugs](#fixed-bugs)
-   - [Unfixed Bugs](#unfixed-bugs)
-8. [Deployment](#deployment)
-   - [Heroku Deployment Steps](#heroku-deployment-steps)
-   - [Cloud IDE Reminders](#cloud-ide-reminders)
-9. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
-    - [Libraries Used and Usage Examples](#libraries-used-and-usage-examples)
-10. [Credits](#credits)
-    - [Content References](#content-references)
-    - [Media References](#media-references)
-11. [Acknowledgements (Optional)](#acknowledgements-optional)
+8. [Validation](#validation)
+9. [Bugs](#bugs)
+10. [Deployment](#deployment)
+11. [Libraries and Technologies](#libraries-and-technologies)
+12. [Credits](#credits)
 
 -------------
 
@@ -181,7 +167,7 @@ To help minimize processing time and prevent my computer from crashing during th
 
 **Evaluation plot LinearRegression**
 
-![Evaluation plot with the model LinearRegression]()
+![Evaluation plot with the model LinearRegression](/images/Evu_reg_plot.png)
 
 
 The next algorithem that was tested was KNeighborsRegressor which is a non-parametric regression method that predicts values based on the k closest training data points. It stores the training data and uses a distance metric, usually Euclidean distance, to make predictions.For each prediction, the average of the target values of the k nearest points is calculated. This can be done with uniform weighting or by considering distance. Choosing the right value for k is crucial: smaller values may result in high variance, while larger values can lead to high bias. Therefore, the function was created to the optimal k-value, along with the mean R² value. The optimail k-value was 19, but the R² value was 0.47 at the maximum.
@@ -194,7 +180,7 @@ Since the previuse models did not succssed in reatching the R² value of 0.70 th
 
 **Cluster**
 
-A clustering model was also developed, but it revealed that the data does not form well-defined clusters, making it ineffective for identifying correlations between conditions and Exam Score. the Silhouette analysis showed an loser then average Silhouette Score of approximately 0.32, indicating a lack of well-defined clusters, as values close to zero suggest poor clustering structure. 
+A clustering model was also developed, but it revealed that the data does not form well-defined clusters, making it ineffective for identifying correlations between conditions and Exam Score. The Silhouette analysis showed an loser then average Silhouette Score of approximately 0.32, indicating a lack of well-defined clusters, as values close to zero suggest poor clustering structure. 
 
 This lack of separation is clearly evident in the cluster plot, which show that the data points do not form distinct clusters, further demonstrating the challenges in identifying meaningful patterns related to Exam Scores. Leading to no futher investigation in the cluster model.
 
@@ -212,49 +198,38 @@ In conclusion, while various approaches were explored to achieve an R² accuracy
 
 -----
 
-## Testing
-
-### Manuel test
-
-The testing documentation for this project is available in another document. To access information about the testing, please click on the following link: TESTING.md
-
-### Automated test
-
-No automated tests have been conducted on the code.
-
-### Validation
+## Validation
 
 All code in the app_pages and src directories was validated as conforming to PEP8 standards using CodeInstitute's PEP8 Linter.
 
 ## Bugs
 
-No major buges under the project
+During the deployment of the project, it was discovered that some of the packages and libraries used were not compatible. This issue was resolved by testing the versions of the packages. Otherwise, no major bugs were encountered during the development of the project.
+
 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+* The App live link is: [Predict Students Exam Score](https://YOUR_APP_NAME.herokuapp.com/) 
+The project have been deployed to heruko folowing the steps below:
 
-1. Log in to Heroku and create an App
+1. Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+2. Ensure your requirements.txt file contains all the packages necessary to run the streamlit dashboard.
+
+1. Log in to Heroku and create an  new App ny clicking on **Create app**
 2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
+3. Select your repository name and click **Search**. Once it is found, click **Connect**.
+4. Select the branch you want to deploy, then click **Deploy Branch**.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 
-### Cloud IDE Reminders
+#### Installing Requirements
+**WARNING:** The packages listed in the requirements.txt file are limited to those necessary for the deployment of the dashboard to Heroku, due to the limit on the slug size.
 
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
+In order to ensure all the correct dependencies are installed in your local environment, run the following command in the terminal:
+           
+       - pip install -r full-requirements.txt
 
 
 ## Main Data Analysis and Machine Learning Libraries
@@ -287,22 +262,18 @@ To log into the Heroku toolbelt CLI:
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+- This project was inspired by the walkthrough project 'Churnometer' from Code Institute.
+- Hyperparemeters test have been constructed with AI, specifically OpenAI's ChatGPT.
+- The function to present the median value in the plot was found on [Stackoverflow](https://stackoverflow.com/questions/38649501/labeling-boxplot-in-seaborn-with-median-value)
+- Stockoverflow, W3schools have been used to find solutions to small buges
 
 
+### Acknowledgements
+- My Slackteam and their amazing support and assistance.
+- Special thanks to Patricia Halley for pushing me when I don't have any motivation.
 
-## Acknowledgements (optional)
-* Thank the people that provided support through this project.
+- My mentor, Mo Shami, for guiding and supporting me in the right direction.
+
+- My Mum to for being there when a needed to disscuse conclusions.
+- My husband for his unwavering support and for handling everything else and our family while I focused on this project.
 
