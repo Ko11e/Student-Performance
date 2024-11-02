@@ -1,6 +1,13 @@
 import streamlit as st
+import seaborn as sns
+import matplotlib.pyplot as plt
+from src.data_management import load_student_data
+from src.machine_learning.plot_functions import add_median_labels
 
 def page_hypothesis_o_validation_body():
+
+    df = load_student_data()
+
     st.write(
         "This is the first page"
     )
@@ -24,6 +31,16 @@ def page_hypothesis_o_validation_body():
         This will conclude that this hypothesis will be rejected
         """
     )
+    if st.checkbox("Visualize Graf"):
+        st.write("")
+        
+        plt.figure(figsize=(12, 6))
+        
+        sns.scatterplot(data=df, x="Exam_Score", y="Hours_Studied", hue="Attendance")
+        st.pyplot(plt.gcf())
+
+    st.write("---")
+
     st.success(
         """
         ## Hypothesis 2
@@ -45,6 +62,17 @@ def page_hypothesis_o_validation_body():
         a smale trend that disproves the hypothesis. 
         """
     )
+    if st.checkbox("Visualize Data"):
+        st.write("")
+        
+        plt.figure(figsize=(12, 6))
+        
+        ax = sns.boxplot(data=df, x='Exam_Score', hue='Parental_Education_Level')
+        add_median_labels(ax)
+        st.pyplot(plt.gcf())
+    
+    st.write("---")
+
     st.success(
         """
         ## Hypothesis 3
@@ -73,5 +101,15 @@ def page_hypothesis_o_validation_body():
 
         """
     )
-
+    
+    if st.checkbox("Visualize Best features in classifier model"):
+        st.write("")
+        
+        # plt.figure(figsize=(12, 6))
+        
+        # ax = sns.boxplot(data=df, x='Exam_Score', hue='Parental_Education_Level')
+        # add_median_labels(ax)
+        # st.pyplot(plt.gcf())
+    
+    st.write("---")
 
