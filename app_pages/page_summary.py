@@ -33,13 +33,13 @@ def page_summary_body():
 
     st.success(
         """
-        To make tha data analieses and predictions the dataset from Kaggle 
-        to see a samlpe of the dataset cklicka the box belowe.
+        **Dataset Attributes:** 
+        
+        The dataset contains 20 features, with 'Exam_Score' as the target. 
 
-        Dataset Attributes: The dataset contains 20 features, with 'Exam_Score' as the target. 
-        As well as 'Improved' which was a attached subtraction the featrue 'Previus_Score' from 'Exam_Score'
-
-        Dataset Observations: The dataset contains a total of 6607 observations.
+        **Dataset Observations:** 
+        
+        The dataset contains a total of 6607 observations.
         """
     )
     if st.checkbox("Inspect dataset"):
@@ -62,10 +62,6 @@ def page_summary_body():
         _**Business Requirement 2:**_
 
         The client aims to predict students' exam scores based on their resources.
-
-        _**Business Requirement 3:**_
-
-        The client wants to predict whether a student will improve their score based on their previous scores.
 
         """
     )

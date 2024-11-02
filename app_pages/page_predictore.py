@@ -30,41 +30,21 @@ def ML_prediction_exam_score():
     # st.info()
 
     # st.info()
-    # Select a variable for exploration
-    selected_variable = st.radio("Select a variable to explore:", ["Exam Score", 'Imporve Score'],
-                                index=0)
+
     # Display plots based on selected variable or Parallel Plot
-    if selected_variable == "Exam Score":
-        st.write("### Exam Score Predictor Tool:")
-        X_live = DrawInputsWidgets_Exam()
-        if st.button("Run Predictive Analysis"):
-            students_score_prediction = predict_score(
-                X_live, exam_score_pipe_model)
-            exam_score_final_pred = '{:.0f}'.format(students_score_prediction[0])
-            st.write("* The model has predicted that the most plausible Exam score result is:")
-            st.write(f"**{exam_score_final_pred}**")
-
-        st.write("---")
-    elif selected_variable == "Imporve Score":
-        st.write("### Improvment of Score Predictor Tool:")
-        #X_live = DrawInputsWidgets_Imporv()
-
+    st.write("### Exam Score Predictor Tool:")
+    X_live = DrawInputsWidgets_Exam()
+    if st.button("Run Predictive Analysis"):
+        students_score_prediction = predict_score(
+            X_live, exam_score_pipe_model)
+        exam_score_final_pred = '{:.0f}'.format(students_score_prediction[0])
+        st.write("* The model has predicted that the most plausible Exam score result is:")
+        st.write(f"**{exam_score_final_pred}**")
 
     st.write("---")
 
-    # st.write("---")
 
-    # st.write("### Exam Score Predictor Tool:")
-    # X_live = DrawInputsWidgets()
-
-    # if st.button("Run Predictive Analysis"):
-    #     students_score_prediction = predict_score(
-    #         X_live, exam_score_pipe_model)
-    #     formatted_price = students_score_prediction
-    #     st.write("* The model has predicted that the most proppebell Exam Score for the student is:")
-    #     st.write(f"**{formatted_price}**")
-
-    # st.write("---")
+    st.write("---")
 
 
 def DrawInputsWidgets_Exam(): # sale_price_features):

@@ -73,43 +73,4 @@ def page_hypothesis_o_validation_body():
     
     st.write("---")
 
-    st.success(
-        """
-        ## Hypothesis 3
-        For the students to improve their scores, students need to focus on 
-        attending lectures, participating in tutoring sessions, 
-        and increasing their study hours.
-        """
-    )
-    st.warning(
-        """
-        #### Conclusion
-        In the pipline where the model is train to see if the student can imporve 
-        there score it can be seen that the the more important feature for the 
-        prediction is the students success is 
-        * Attendance
-        * Tutoring_Sessions
-        * Hours_Studied
-        * Sleep_Hours
-        * Physical_Activity
-        * Parental_Education_Level
-        * Parental_Involvement
-
-        Where the first three features are the ones with the highers influance 
-        on the training of the model. In conclusion tha data strongly support 
-        the hypothesis and will **not** be redjected.
-
-        """
-    )
-    
-    if st.checkbox("Visualize Best features in classifier model"):
-        st.write("")
-        
-        # plt.figure(figsize=(12, 6))
-        
-        # ax = sns.boxplot(data=df, x='Exam_Score', hue='Parental_Education_Level')
-        # add_median_labels(ax)
-        # st.pyplot(plt.gcf())
-    
-    st.write("---")
 

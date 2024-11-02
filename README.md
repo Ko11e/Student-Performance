@@ -75,8 +75,6 @@ he client for this project is a school district that wants to identify the resou
 
 * **Business Requirement 2**: The client aims to predict students' exam scores based on their resources.
 
-* **Business Requirement 3**: The client wants to predict whether a student will improve their score based on their previous scores.
-
 -------------
 
 ## Hypothesis and how to validate?
@@ -89,9 +87,6 @@ If students have high attendance and spend a significant number of hours studyin
 
 #### Hypothesis 2
 The education level of the students' parents does not have a significant impact on the students' final exam scores.
-
-#### Hypothesis 3
-For the students to improve their scores, students need to focus on attending lectures, participating in tutoring sessions, and increasing their study hours.
 
 ### Validation and Conclusion 
 
@@ -109,22 +104,7 @@ This will conclude that this hypothesis will be rejected
 This can be confirmed by analyzing the dataset and performing correlation studies, including the use of heatmaps.
 
 **Conclusion**
-The median value for the education level of students' parents is relatively similar, but a closer look reveals a slight trend. Students tend to have better Exam score when their parents have higher educational backgrounds. However, the trend is so smale that it have no significat infuance in the students Exam score. There is also shown that Parental_Education_Level is one of the importent features when trying to predict if student can impove theire score. This lead to that this hypothersis will be redject since the data shows a smale trend that disproves the hypothesis. 
-
-#### Hypothesis 3
-This can been seen in the on the best features for the ML Pipeline that predict in the students will improve there score or not.
-
-**Conclusion**
-In the pipline where the model is train to see if the student can imporve there score it can be seen that the the more important feature for the prediction is the students success is 
-* Attendance
-* Tutoring_Sessions
-* Hours_Studied
-* Sleep_Hours
-* Physical_Activity
-* Parental_Education_Level
-* Parental_Involvement
-
-Where the first three features are the ones with the highers influance on the training of the model. In conclusion tha data strongly support the hypothesis and will **not** be redjected.
+The median value for the education level of students' parents is relatively similar, but a closer look reveals a slight trend. Students tend to have better Exam score when their parents have higher educational backgrounds. However, the trend is so smale that it have no significat infuance in the students Exam score. This lead to that this hypothersis will be redject since the data shows a smale trend that disproves the hypothesis. 
 
 -------------
 
@@ -132,16 +112,11 @@ Where the first three features are the ones with the highers influance on the tr
 
 ### Business Requirement 1
 
-To understand the factors associated with higher student scores, we will perform a correlation study. This analysis will utilize different methods to detect various types of relationships. First, Pearson's method will be used to identify linear relationships, while Spearman's method will capture monotonic relationships. Additionally, the Predictive Power Score (PPS) will help us detect more subtle and potentially asymmetric associations. Once the classification models are complete, we will also extract similar statistics from the key features identified as important within these models.
+To understand the factors associated with higher student scores, we will perform a correlation study. This analysis will utilize different methods to detect various types of relationships. First, Pearson's method will be used to identify linear relationships, while Spearman's method will capture monotonic relationships. Additionally, the Predictive Power Score (PPS) will help us detect more subtle and potentially asymmetric associations.
 
 ### Business Requirement 2
 
 In order to accurately predict students' exam scores, we will implement a regression model that will enable us to estimate these scores based on a variety of relevant features. This approach involves constructing a regression model within a structured machine learning pipeline, which will facilitate the identification of relationships between the input features and the target variable. Furthermore, the plan is to conduct hyperparameter optimization to maximize the accuracy of our predictions.
-
-
-### Business Requirement 2
-To predict if a student's performance has improved, we will that dataset to calculate the difference between studets previous and Exam scores. This analysis will help us develop a binary classification model to predict improvements. By using a structured machine learning pipeline, we can explore the relationships between various factors and the likelihood of score improvement. Additionally, we will conduct thorough hyperparameter optimization to enhance our model's accuracy in predicting student performance.
-
 
 -------------
 
@@ -159,17 +134,6 @@ To predict if a student's performance has improved, we will that dataset to calc
 
 
 These metrics ensure that the model not only performs well statistically but also provides meaningful and actionable.
-
-## Predicting improvement of the score
-
-### Classification
-
-An ML model was developed to predict whether or not the student will improve their score based on the factors the school can provide and the factors from home. The result whether the student improves their score or not will be presented with a 1 or a 0, respectively
-
-Model Success Metrics:
-- **Accuracy ≥ 70%**
-- **Precision for not Improved ≥ 70%**
-- **F1 Score ≥ 70%**:
 
 ------------
 
@@ -196,14 +160,8 @@ The dashboard includes data visualizations to highlight relationships.
 ### Page 4: Students Exam Score Predictor
 
 This page will contain the second business requirement which involves implementing a feature for inputting data and generating predictions. This includes creating widget inputs where users can enter the necessary data for the prediction. Additionally, there will be a "Run Prediction" button that, when clicked, runs the inputted data through the machine learning model, producing a prediction. 
-<!-- along with a probability percentage. -->
 
-### Page 5: Improvement of score Predictor 
-
-This page will contain the third business requirement which involves implementing a feature for inputting data and generating predictions. This includes creating widget inputs where users can enter the necessary data for the prediction. Additionally, there will be a "Run Prediction" button that, when clicked, runs the inputted data through the machine learning model, producing a prediction.
-<!-- along with a probability percentage. -->
-
-### Page 6: ML Predictor preformens 
+### Page 5: ML Predictor preformens 
 
 The document provides a summary of the model's performance and key metrics, detailing the overall effectiveness and accuracy of the model. It also outlines the model pipeline and describes the features used for training, explaining the selection criteria for each feature. Additionally, the document includes comprehensive documentation of the model's performance across both the training and testing datasets, highlighting any differences in accuracy, variance, and potential areas for improvement.
 
@@ -211,13 +169,11 @@ The document provides a summary of the model's performance and key metrics, deta
 
 ## The Dataset and the Models
 
-Despite extensive efforts to understand the data and identify correlations or insignificant features, the dataset lacks sufficient predictive power to develop a reliable model. Upon examining the data, it is evident that most features follow a normal distribution concerning the exam scores. However, there are no standout elements in the dataset that significantly impact the ability to predict trends, this can also be seen in the section about the cluster model. This limitation makes the analysis narrow and difficult to interpret. 
-
-### Exam Score predictor
+Despite extensive efforts to understand the data and identify correlations or insignificant features, the dataset lacks sufficient predictive power to develop a reliable model. Upon examining the data, it is evident that most features follow a normal distribution concerning the exam scores. However, there are no standout elements in the dataset that significantly impact the ability to predict trends, this can also be seen in the section about the cluster model. This limitation makes the analysis narrow and difficult to interpret. In this section the model that is created to predict if the student improves their score or not will not be discussed in detail.
 
 Various pipelines have been tested to evaluate the R² value. The data does not contain many missing values, which makes the cleaning process relatively straightforward. Different approaches were explored to possibly improve the model. The conclusion was to implement three different strategies for handling the missing data. The first strategy involved replacing NaN values with the word "Missing," the second involved filling them with the most frequent value, and the third involved removing rows with NaN values. However, none of the strategies proved to be better than the others, leading to the decision to retain the first strategy.
 
-#### Regression
+**Regression**
 
 In the initial attempt to find the best model, we focused on using regression models. Our goal was to achieve an R² accuracy of over 0.70. However, we did not succeed in our first try. The most effective algorithm we found was Linear Regression, which yielded an R² value of 0.64. While trying to optimize the model through hyperparameter tuning, the maximum mean value we achieved remained at 0.64. A detailed comparison of different models and hyperparameters can be found **[here](/MODEL-TEST.md)**.
 
@@ -232,11 +188,11 @@ The next algorithem that was tested was KNeighborsRegressor which is a non-param
 
 Forward the pipeline was built using PCA. This however resulted in a lower accarcy and needed all the feature to built the model. This Pipline was not tested  with hyperparameters since the R² value was lower then 0.4. 
 
-### Classification
+**Classification**
 
 Since the previuse models did not succssed in reatching the R² value of 0.70 the next appotch was to us Classification by dividing the taget in to catagorige with the same number of datapoint. Due to the distrubusion of the taget the sizing of the spans was `['<64.0', '64.0 to 66.0', '66.0 to 68.0', '68.0 to 70.0','+70.0']`. Even thoght this model had a high value in the recall the model only predicted <64.0, +70.0 making the accuracy to 0.33.
 
-### Cluster
+**Cluster**
 
 A clustering model was also developed, but it revealed that the data does not form well-defined clusters, making it ineffective for identifying correlations between conditions and Exam Score. the Silhouette analysis showed an loser then average Silhouette Score of approximately 0.32, indicating a lack of well-defined clusters, as values close to zero suggest poor clustering structure. 
 
@@ -253,11 +209,6 @@ This lack of separation is clearly evident in the cluster plot, which show that 
 ### Conclusion
 
 In conclusion, while various approaches were explored to achieve an R² accuracy above 0.70, the analysis faced several limitations. Linear Regression yielded the highest R² score of 0.64, but further tuning failed to improve performance. Alternative methods, including KNeighborsRegressor, PCA, classification, and clustering, were tested, but none provided significant gains. The clustering model particularly showed that the data lacks well-defined patterns, as evidenced by a low Silhouette Score. Ultimately, due to clustering and classification challenges, combined with limited gains from regression and hyperparameter optimization, Linear Regression with NaN values replaced by "Missing" was retained as the optimal model setup.
-
-## Predict improved score
- 
-### Classification
-
 
 -----
 
