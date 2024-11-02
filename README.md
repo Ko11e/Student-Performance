@@ -2,7 +2,7 @@
 
 This project aims to help a school district improve student outcomes by analyzing factors that influence student performance. By examining various student-related attributes, the project investigates how different conditions correlate with exam scores and predicts future scores based on student resources. The analysis includes exploring data correlations, testing hypotheses, and building a predictive machine learning model to assist educators in identifying and prioritizing key influences on academic success.
 
-The deployed project can be accessed [here]()
+The deployed project can be accessed [here](https://predict-student-performance-1fc4615a3168.herokuapp.com/)
 
 ## Table of contents
 
