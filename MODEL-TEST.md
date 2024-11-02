@@ -1,9 +1,10 @@
 # Hyperparameter testing
 
-## Regression model
+This document contains all the tests conducted to enhance the model.
 
-In the tabel
+## Model for Predicting Exam Score
 
+### Regression model
 
 | Model                     | Parameters                        | Values                        | Best mean score                                  |
 |---------------------------|-----------------------------------|-------------------------------|:------------------------------------------:|
@@ -13,10 +14,10 @@ In the tabel
 | **GradientBoostingRegressor** <br> Higher complexity and model flexibility | `model__n_estimators` <br> `model__learning_rate` <br> `model__max_depth` <br> `model__subsample` <br> `model__max_features` <br> `model__min_samples_leaf` <br> `model__random_state` | [500, 1000] <br> [0.01, 0.05] <br> [5, 7] <br> [0.8] <br> ["auto", 0.8] <br> [1, 3] <br> [42] |  0.54 |
 | **XGBRegressor** <br> Balanced performance and speed | `model__n_estimators` <br> `model__learning_rate` <br> `model__max_depth` <br> `model__subsample` <br> `model__colsample_bytree` <br> `model__random_state` | [100, 200] <br> [0.1, 0.05] <br> [3, 5] <br> [0.8] <br> [0.8, 1.0] <br> [42] |  0.62 | 
 
+### KN
 
-## Classification
 
-
+### Classification
 
 | Model                     | Parameters                                    | Values                                             | Best mean score                          |
 |---------------------------|-----------------------------------------------|----------------------------------------------------|:----------------------------------------:|
@@ -26,3 +27,6 @@ In the tabel
 | **ExtraTreesClassifier** <br>  Preventing overfitting | `model__max_depth` <br> `model__min_samples_split` <br> `model__min_samples_leaf` <br> `model__max_features` <br> `model__max_leaf_nodes` <br> `model__random_state` | [10, 20, 30] <br> [5, 10] <br> [4, 10] <br> [0.5, "sqrt"] <br> [50, 100] <br> [42] | 0.83 |
 | **ExtraTreesClassifier** <br> Balanced accuracy and performance | `model__criterion` <br> `model__max_depth` <br> `model__min_samples_split` <br> `model__min_samples_leaf` <br> `model__max_features` <br> `model__random_state` | ["gini", "entropy"] <br> [None, 10, 20] <br> [2, 5] <br> [1, 2, 4] <br> ["sqrt", "log2"] <br> [42] |  0.79 |
 
+
+
+[Go Back to README](/README.md)
