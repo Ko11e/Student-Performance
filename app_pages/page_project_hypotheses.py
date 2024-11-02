@@ -32,7 +32,22 @@ def page_hypothesis_o_validation_body():
         """
     )
     if st.checkbox("Visualize Graf"):
-        st.write("")
+        st.write(
+            """
+            _**Relationship between hours Studied and Exam scores with
+            
+        Distrubusion oven Studied Houres, Attendance and Exam score**_
+            """
+        )
+        st.write(
+            """
+            This graf show a correlation between the Studied Houres, Attendance and the resulte
+            from the Student exam score. In the cluster can a distict color diffrence been since 
+            indicating a trend that the student result would be higher with a high attendance 
+            and number of stuided houres. This visual highlights the combined influence of 
+            study time and attendance on student performance.
+            """
+        )
         
         plt.figure(figsize=(12, 6))
         
@@ -52,18 +67,25 @@ def page_hypothesis_o_validation_body():
         """
         #### Conclusion
         The median value for the education level of students' parents is 
-        relatively similar, but a closer look reveals a slight trend. Students 
-        tend to have better Exam score when their parents have 
-        higher educational backgrounds. However, the trend is so smale that 
-        it have no significat infuance in the students Exam score. There is 
-        also shown that Parental_Education_Level is one of the importent features when 
-        trying to predict if student can impove theire score.
-        This lead to that this hypothersis will be redject since the data shows 
+        relatively similar and the range and outliers indicate that students' 
+        exam performance can vary widely within each parental education category, 
+        but a closer look reveals a slight trend. Students tend to have better 
+        Exam score when their parents have higher educational backgrounds. However, 
+        the trend is so smale that it have no significat infuance in the students 
+        Exam score. This lead to that this hypothersis will be redject since the data shows 
         a smale trend that disproves the hypothesis. 
         """
     )
     if st.checkbox("Visualize Data"):
-        st.write("")
+        st.write("_**Distribution of exam scores based on parental education levels**_")
+        st.write(
+            """
+            In the graph belowe shows a boxplot where it can be seen that the media values are
+            relatively similar. The box shows the interquartile range (IQR), from the 
+            25th percentile (bottom edge) to the 75th percentile (top edge) and in this boxes
+            there a smal swift to  higher score  if the parent have a higher education level.
+            """
+        )
         
         plt.figure(figsize=(12, 6))
         
